@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About HI-TECH Rental Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+    header {
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem 5%;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ff0033;
+      text-shadow: 0 0 10px rgba(255,0,51,0.5);
+    }
+    nav a { color: #fff; margin-left: 2rem; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: #ff0033; }
+    .hero {
+      height: 113vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('YOUR_SHOP_OR_TOOLS_PHOTO_URL') center/cover;
+      position: relative;
+    }
+    .hero h1 {
+  font-size: clamp(6rem, 1vw, 10rem);
+  font-weight: 900;
+  color: #ff0033;
+  letter-spacing: 6px;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+
+  animation: neonGlow 4s infinite ease-in-out;
+}
+
+
+.hero p {
+  font-size: 1.8rem;
+  opacity: 0.9;
+  max-width: 800px;
+}
+    .btn {
+      margin-top: 2rem;
+      padding: 1.2rem 3rem;
+      background: #ff0033;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,0,51,0.6);
+      transition: all 0.3s;
+    }
+    .btn:hover { transform: scale(1.1); box-shadow: 0 0 40px rgba(255,0,51,0.8); }
+    section { padding: 8rem 5%; max-width: 1200px; margin: 0 auto; }
+    h2 {
+      font-size: 3rem;
+      color: #ff0033;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: rgba(30,30,30,0.8);
+      border: 1px solid #ff0033;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.4s;
+    }
+    .card:hover { transform: translateY(-15px); box-shadow: 0 0 30px rgba(255,0,51,0.5); }
+    .card h3 { color: #ff0033; margin-bottom: 1rem; }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3.5rem; }
+      section { padding: 6rem 5%; }
+    }
+  </style>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+  
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 80) {
+        header.classList.add("shrink");
+      } else {
+        header.classList.remove("shrink");
+      }
+    });
+  });
+  </script>
+  
+
+<body>
+
+  <header>
+    <div class="logo">HI-TECH Rental</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    
+  </header>
+
+  <section class="hero">
+    <h1>HI-TECH RENTAL SHOP</h1>
+    <p>ഇനി നിങ്ങളുടെ പ്രശ്നം  നമ്മൾ പരിഹരിക്കാം സൈറ്റിൽ വന്ന് സെറ്റാകാം .ചെറിയ ചിലവ് വലിയ ഉപകാരം.hi tech k.v.kavu </p>
+    <a href="tel:+919072206212" class="btn">ഇപ്പോൾ വിളിക്കൂ</a>
+    </a>    
+  </section>
+
+  <section id="about">
+    <h2>ഞങ്ങളെക്കുറിച്ച്</h2>
+    <p style="text-align:center; font-size:1.3rem; max-width:900px; margin:0 auto 4rem;">
+      HI-TECH Rental Shop: കണ്ണം വെട്ടിക്കാവിലെ വിശ്വസനീയമായ പവർ ടൂൾസ്, കോമ്പ്രസർ, ജനറേറ്റർ, സ്കാഫോൾഡിങ് എന്നിവയുടെ റെന്റൽ സർവീസാണ്. ഞങ്ങൾ ഉയർന്ന നിലവാരമുള്ള ഉപകരണങ്ങൾ താങ്ങാവുന്ന വിലയിൽ നൽകി നിങ്ങളുടെ പ്രോജക്ടുകൾ വേഗത്തിലും എളുപ്പത്തിലും പൂർത്തിയാക്കാൻ സഹായിക്കുന്നു.
+    </p>
+  </section>
+
+  <section id="why-us">
+    <h2>ഞങ്ങളെ തിരഞ്ഞെടുക്കാൻ കാരണങ്ങൾ</h2>
+    <div class="features">
+      <div class="card">
+        <h3>മികച്ച നിലവാരം</h3>
+        <p>എല്ലാ ടൂൾസും പരിശോധിച്ച് സർവീസ് ചെയ്തത്</p>
+      </div>
+      <div class="card">
+        <h3>താങ്ങാവുന്ന നിരക്ക്</h3>
+        <p>ദിവസം/ആഴ്ച/മാസം റേറ്റുകൾ മികച്ചത്</p>
+      </div>
+      <div class="card">
+        <h3>വേഗ സർവീസ്</h3>
+        <p>എളുപ്പ ബുക്കിങ് & ഡെലിവറി</p>
+      </div>
+      <div class="card">
+        <h3>എക്സ്പേർട്ട് സപ്പോർട്ട്</h3>
+        <p>ഏത് ടൂൾ എങ്ങനെ ഉപയോഗിക്കണമെന്ന് ഗൈഡ് ചെയ്യാം</p>
+      </div>
+    </div>
+  </section>
+  <section id="location">
+    <h2>ഞങ്ങളെ ഇവിടെ കണ്ടെത്താം</h2>
+    <div style="border-radius:15px; overflow:hidden; box-shadow:0 0 25px rgba(255,0,51,0.4);">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d816.6867744083328!2d75.91160065470363!3d11.189047196491845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6455787f8f4f9%3A0xb7f52795e2f0e1e6!2sTECH%20TOOLS%20%26%20RENTALS!5e1!3m2!1sen!2sin!4v1768102524971!5m2!1sen!2sin"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+ <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919946680626?text=Hi%20HI-TECH%20Rental%20Shop,%20tool%20rental%20details%20ariyan%20vendi%20contact%20cheyyunnu."
+class="whatsapp-float"
+target="_blank"
+aria-label="Chat on WhatsApp">
+</a>
+
+<style>
+.whatsapp-float {
+position: fixed;
+bottom: 110px; /* call button-ന്റെ മുകളിൽ */
+right: 25px;
+width: 65px;
+height: 65px;
+background-color: #25D366;
+background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 38px;
+border-radius: 50%;
+box-shadow: 0 0 25px rgba(37,211,102,0.7);
+z-index: 9999;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+transform: scale(1.15);
+box-shadow: 0 0 40px rgba(37,211,102,1);
+}
+@keyframes neonGlow {
+  0% {
+    text-shadow:
+      0 0 10px #ff0033,
+      0 0 20px #ff0033,
+      0 0 40px #ff0033;
+  }
+  50% {
+    text-shadow:
+      0 0 20px #ff0033,
+      0 0 40px #ff0033,
+      0 0 80px #ff0033;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #ff0033,
+      0 0 20px #ff0033,
+      0 0 40px #ff0033;
+  }
+}
+/* ===== HEADER SHRINK EFFECT ===== */
+header {
+  transition: all 0.4s ease;
+}
+
+header.shrink {
+  padding: 0.7rem 5%;
+  background: rgba(0,0,0,0.95);
+}
+
+header.shrink .logo {
+  font-size: 1.5rem;
+}
+
+header.shrink nav a {
+  font-size: 0.95rem;
+}
+
+</style>
+<footer>
+  © 2026 HI-TECH Tools & Rentals | Kannamvettikavu
+</footer>
+</body>
+</html>
