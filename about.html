@@ -4,233 +4,245 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | HI-TECH Tools & Rentals</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #ff0033;
+      --bg-dark: #0a0a0a;
+      --bg-card: rgba(30,30,30,0.85);
+      --text-light: #e0e0e0;
+      --text-white: #ffffff;
+      --nav-bg: rgba(0,0,0,0.95);
+    }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0b0b0b;
-      color: #e0e0e0;
-      line-height: 1.8;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.7;
     }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
 
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      padding: 1.2rem 5%;
-      background: rgba(0,0,0,0.95);
+      padding: 1rem 5%;
+      background: var(--nav-bg);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 100;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .logo {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      color: #ff0033;
-      text-shadow: 0 0 12px rgba(255,0,51,0.6);
+      color: var(--primary);
+      text-transform: uppercase;
+      /* Shadow removed */
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 2rem;
-      font-weight: 600;
-    }
+    nav ul { display: flex; gap: 2rem; }
+    nav a { color: var(--text-white); font-weight: 600; transition: color 0.3s; }
+    nav a:hover, nav a.active { color: var(--primary); }
 
-    nav a:hover { color: #ff0033; }
+    .menu-toggle { display: none; color: white; cursor: pointer; }
 
+    /* CONTENT */
     .banner {
-      margin-top: 90px;
+      margin-top: 70px; /* Space for fixed header */
     }
-
+    
     .banner img {
       width: 100%;
-      max-height: 420px;
+      max-height: 350px;
       object-fit: cover;
     }
 
     section {
-      max-width: 1100px;
-      margin: auto;
       padding: 4rem 5%;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     h1 {
       text-align: center;
-      font-size: 3rem;
-      color: #ff0033;
+      font-size: 2.5rem;
+      color: var(--primary);
       margin-bottom: 1.5rem;
-      text-shadow: 0 0 18px rgba(255,0,51,0.6);
+      /* Shadow removed */
     }
 
     .about-text {
       font-size: 1.15rem;
       text-align: center;
-      opacity: 0.95;
+      margin-bottom: 4rem;
+      color: #ccc;
     }
 
     .services {
-      margin-top: 3.5rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
     }
 
     .card {
-  min-height: 220px;
-  padding: 2rem;
-  border-radius: 18px;
-  color: #fff;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  border: 1px solid #ff0033;
-  box-shadow: 0 0 25px rgba(255,0,51,0.4);
-
-  position: relative;
-}
-
-/* 🔥 overlay for text clarity */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  border-radius: 18px;
-}
-
-.card * {
-  position: relative;
-  z-index: 1;
-}
-
-/* 🎯 Individual images */
-.card.grass {
-  background-image: url(https://i.pinimg.com/1200x/9a/05/bb/9a05bb806e0474be135add67f2c07552.jpg);
-}
-
-.card.concrete {
-  background-image: url(https://toolz4industry.com/wp-content/uploads/2024/08/petrol-slab-cutter-110.png);
-}
-
-.card.breaker {
-  background-image: url(https://www.nbmcw.com/images/nbm-media/Reports/Equipment-Machinery/29181-drillmachine.webp);
-}
-
-.card.tools {
-  background-image: url(https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6InVzZXIta25SaVpiSTV5YXlPeFgzbFluVVk0TnNnOmZpbGVfMDAwMDAwMDA2MjkwNzIyZmIxNzUwYTYzNmJkZWViMTIiLCJ0cyI6IjIwNDY2IiwicCI6InB5aSIsImNpZCI6IjEiLCJzaWciOiIxZDM2MTg4MzU1ODI2NjFlMzVkYjFiOWY2NWMxODI0MDliZDhhOTNkOWUyMDVlOWEwMTA3OGYyY2IxZWMxZDI5IiwidiI6IjAiLCJnaXptb19pZCI6bnVsbCwiY3MiOm51bGwsImNwIjpudWxsLCJtYSI6bnVsbH0=);
-}
-
-
-    .card h3 {
-      color: #ff0033;
-      margin-bottom: 0.8rem;
+      min-height: 250px;
+      padding: 2rem;
+      border-radius: 18px;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid var(--primary);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      /* Text shadow removed */
     }
 
-    .contact {
-      margin-top: 4rem;
-      background: rgba(20,20,20,0.95);
-      border-radius: 16px;
-      padding: 3rem;
-      box-shadow: 0 0 30px rgba(255,0,51,0.4);
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.2));
     }
 
-    .contact h2 {
-      color: #ff0033;
-      text-align: center;
-      margin-bottom: 1.5rem;
+    .card h3, .card p {
+      position: relative;
+      z-index: 1;
     }
+    .card h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.4rem; /* Shadow removed */ }
+    
+    .card.grass { background-image: url('https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=600&q=80'); }
+    .card.concrete { background-image: url('https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&w=600&q=80'); }
+    .card.breaker { background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80'); }
+    .card.tools { background-image: url('https://images.unsplash.com/photo-1581147036324-c17ac41d16e7?auto=format&fit=crop&w=600&q=80'); }
 
-    .contact p {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 0.6rem;
+    /* FLOATING BUTTONS */
+    .whatsapp-float, .call-float {
+      position: fixed;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
+    
+    .whatsapp-float { bottom: 100px; background-color: #25D366; }
+    .call-float { bottom: 25px; background-color: var(--primary); }
+    .whatsapp-float:hover, .call-float:hover { transform: scale(1.1); }
+    .whatsapp-float svg { width: 35px; height: 35px; fill: white; }
+    .call-float svg { width: 30px; height: 30px; color: white; }
 
     footer {
       background: #000;
       text-align: center;
       padding: 2rem;
-      color: #aaa;
-      font-size: 0.95rem;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--nav-bg);
+        border-top: 1px solid #333;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease;
+      }
+      nav.active { transform: scaleY(1); }
+      nav ul { flex-direction: column; padding: 2rem; gap: 1.5rem; align-items: center; }
+      .whatsapp-float, .call-float { width: 50px; height: 50px; right: 15px; }
+      .whatsapp-float { bottom: 85px; }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">HI-TECH Rental</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<!-- Banner -->
-<div class="banner">
-  <img src="https://www.clicktoindia.com/widgetimgs/clicktoindia_widget_705.jpeg" alt="HI-TECH Tools & Rentals Banner">
-</div>
-
-<section>
-
-  <h1>About Us</h1>
-
-  <p class="about-text">
-    HI-TECH Tools & Rentals എന്നത്  
-    കന്നംവെട്ടിക്കാവ്, മലപ്പുറം ആസ്ഥാനമായി പ്രവർത്തിക്കുന്ന  
-    വിശ്വസനീയമായ tool rental സ്ഥാപനമാണ്.  
-    നിർമ്മാണ, കൃഷി, റോഡ് വർക്ക്, demolition തുടങ്ങിയ  
-    എല്ലാ ജോലികൾക്കും ആവശ്യമായ modern tools  
-    മികച്ച നിലവാരത്തിൽ വാടകയ്ക്ക് നൽകുന്നതാണ് ഞങ്ങളുടെ പ്രധാന സേവനം.
-  </p>
-
-  <div class="services">
-
-    <div class="card grass">
-      <h3>കാട് വെട്ടൽ</h3>
-      <p>High power cutting machines ഉപയോഗിച്ച് വേഗത്തിൽ ജോലി</p>
+  <header>
+    <div class="logo">HI-TECH RENTAL</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i data-lucide="menu"></i>
     </div>
-    
-    <div class="card concrete">
-      <h3>കോൺക്രീറ്റ് കട്ടിംഗ്</h3>
-      <p>Concrete cutting machine, floor cutting tools</p>
-    </div>
-    
-    <div class="card breaker">
-      <h3>കോൺക്രീറ്റ് പൊടിക്കൽ</h3>
-      <p>Breaker, demolition tools വാടകയ്ക്ക്</p>
-    </div>
-    
-    <div class="card tools">
-      <h3>മറ്റു Tools</h3>
-      <p>Pillar cutting, tile cutting, drilling tools</p>
-    </div>
-    
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <div class="banner">
+    <img src="https://www.clicktoindia.com/widgetimgs/clicktoindia_widget_705.jpeg" alt="Banner" onerror="this.src='https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80'">
   </div>
 
-  <div class="contact">
-    <h2>Contact Information</h2>
-    <p><strong>📍 Location:</strong> Kannamvettikavu, Malappuram</p>
-    <p><strong>📞 Phone:</strong> 9072 206 212 | 9744 206 212</p>
-    <p><strong>📧 Email:</strong> hashtellmobile@gmail.com</p>
-  </div>
+  <section>
+    <h1>About Us</h1>
+    <p class="about-text">
+      HI-TECH Tools & Rentals എന്നത് കന്നംവെട്ടിക്കാവ്, മലപ്പുറം ആസ്ഥാനമായി പ്രവർത്തിക്കുന്ന വിശ്വസനീയമായ tool rental സ്ഥാപനമാണ്. 
+      നിർമ്മാണ, കൃഷി, റോഡ് വർക്ക്, demolition തുടങ്ങിയ എല്ലാ ജോലികൾക്കും ആവശ്യമായ modern tools മികച്ച നിലവാരത്തിൽ വാടകയ്ക്ക് നൽകുന്നതാണ് ഞങ്ങളുടെ പ്രധാന സേവനം.
+    </p>
 
-</section>
+    <div class="services">
+      <div class="card grass">
+        <h3>കാട് വെട്ടൽ</h3>
+        <p>High power cutting machines ഉപയോഗിച്ച് വേഗത്തിൽ ജോലി</p>
+      </div>
+      <div class="card concrete">
+        <h3>കോൺക്രീറ്റ് കട്ടിംഗ്</h3>
+        <p>Concrete cutting machine, floor cutting tools</p>
+      </div>
+      <div class="card breaker">
+        <h3>കോൺക്രീറ്റ് പൊടിക്കൽ</h3>
+        <p>Breaker, demolition tools വാടകയ്ക്ക്</p>
+      </div>
+      <div class="card tools">
+        <h3>മറ്റു Tools</h3>
+        <p>Pillar cutting, tile cutting, drilling tools</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  © 2026 HI-TECH Tools & Rentals | Kannamvettikavu
-</footer>
+  <!-- Floating Buttons -->
+  <a href="https://wa.me/919946680626?text=Hi%20HI-TECH%20Rental%20Shop" class="whatsapp-float" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.304-5.235c0-5.443 4.429-9.876 9.88-9.876 2.64 0 5.122 1.03 6.988 2.896a9.825 9.825 0 012.893 6.994c-.003 5.444-4.432 9.853-9.886 9.853" fill="white"/></svg>
+  </a>
+  <a href="tel:+919072206212" class="call-float">
+    <i data-lucide="phone" color="white"></i>
+  </a>
 
+  <footer>
+    <p>© 2026 HI-TECH Tools & Rentals | Kannamvettikavu</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
