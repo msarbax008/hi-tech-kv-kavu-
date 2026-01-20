@@ -1,31 +1,13 @@
- Conversation opened. 1 read message. 
-
-Skip to content
-Using Gmail with screen readers
-is:starred 
-
-1 of 1
-(no subject)
-
-Muhammed sanjide.p <sanjidmsnjdp@gmail.com>
-Attachments
-Sat, Jan 17, 4:47 PM (0 minutes ago)
-to me
-
- One attachment
-  •  Scanned by Gmail
 <!DOCTYPE html>
 <html lang="ml">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HI-TECH Tools & Rentals</title>
+  <title>HI-TECH Tools & Rentals - Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet"/>
-  <!-- Lucide Icons for lightweight SVG icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* --- CSS RESET & VARIABLES --- */
     :root {
       --primary: #ff0033;
       --bg-dark: #0a0a0a;
@@ -48,7 +30,7 @@ to me
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
 
-    /* --- HEADER & NAV --- */
+    /* HEADER & NAV */
     header {
       position: fixed;
       top: 0;
@@ -78,7 +60,6 @@ to me
       cursor: pointer;
     }
 
-    /* Desktop Nav */
     nav ul {
       display: flex;
       gap: 2rem;
@@ -108,7 +89,6 @@ to me
       box-shadow: 0 0 10px var(--primary);
     }
 
-    /* Mobile Menu Button */
     .menu-toggle {
       display: none;
       color: white;
@@ -116,27 +96,11 @@ to me
       cursor: pointer;
     }
 
-    /* --- PAGE STRUCTURE (SPA) --- */
     main {
-      padding-top: 80px; /* Space for fixed header */
+      padding-top: 80px;
       min-height: 100vh;
     }
 
-    .page-section {
-      display: none;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    .page-section.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* --- COMMON COMPONENTS --- */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -175,7 +139,7 @@ to me
       box-shadow: 0 0 35px rgba(255,0,51,0.8);
     }
 
-    /* --- HOME PAGE STYLES --- */
+    /* HERO SECTION */
     .hero {
       height: calc(100vh - 80px);
       display: flex;
@@ -183,7 +147,6 @@ to me
       justify-content: center;
       align-items: center;
       text-align: center;
-      /* Using a placeholder since user URL was generic, you can replace this */
       background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1920&auto=format&fit=crop') center/cover;
       padding: 0 5%;
     }
@@ -210,7 +173,7 @@ to me
       50% { text-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary), 0 0 60px var(--primary); }
     }
 
-    /* Features Grid */
+    /* FEATURES */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -231,86 +194,7 @@ to me
       box-shadow: 0 0 25px rgba(255,0,51,0.4);
     }
 
-    /* --- ABOUT PAGE STYLES --- */
-    .banner-img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 0 0 20px 20px;
-      margin-bottom: 3rem;
-    }
-
-    .about-text {
-      text-align: center;
-      font-size: 1.2rem;
-      max-width: 900px;
-      margin: 0 auto 4rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-card {
-      min-height: 250px;
-      padding: 2rem;
-      border-radius: 18px;
-      color: #fff;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border: 1px solid var(--primary);
-      box-shadow: 0 0 15px rgba(255,0,51,0.2);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-
-    .service-card:hover { transform: scale(1.02); }
-
-    .service-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
-    }
-
-    .service-card h3, .service-card p {
-      position: relative;
-      z-index: 1;
-    }
-    
-    .service-card h3 { margin-bottom: 0.5rem; font-size: 1.4rem; }
-    .service-card p { font-size: 0.95rem; opacity: 0.9; }
-
-    /* Service Backgrounds */
-    .card-grass { background-image: url('https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=600&q=80'); }
-    .card-concrete { background-image: url('https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&w=600&q=80'); }
-    .card-breaker { background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80'); }
-    .card-tools { background-image: url('https://images.unsplash.com/photo-1581147036324-c17ac41d16e7?auto=format&fit=crop&w=600&q=80'); }
-
-    /* --- CONTACT PAGE STYLES --- */
-    .contact-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-bottom: 4rem;
-    }
-
-    .contact-card {
-      background: var(--bg-card);
-      border: 1px solid var(--primary);
-      border-radius: 14px;
-      padding: 2.5rem;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(255,0,51,0.2);
-    }
-
+    /* MAP */
     .map-container {
       border-radius: 16px;
       overflow: hidden;
@@ -318,7 +202,7 @@ to me
       border: 1px solid #333;
     }
 
-    /* --- FOOTER & FLOATING BTNS --- */
+    /* FOOTER & FLOATING BTNS */
     footer {
       background: #000;
       text-align: center;
@@ -367,7 +251,7 @@ to me
     .call-float:hover { transform: scale(1.1); }
     .call-float svg { width: 30px; height: 30px; color: white; }
 
-    /* --- MOBILE RESPONSIVENESS --- */
+    /* MOBILE */
     @media (max-width: 768px) {
       .menu-toggle { display: block; }
       
@@ -412,137 +296,63 @@ to me
 </head>
 
 <body>
-
   <!-- HEADER -->
   <header id="header">
-    <div class="logo" onclick="switchTab('home')">HI-TECH RENTAL</div>
+    <div class="logo" onclick="location.href='home.html'">HI-TECH RENTAL</div>
     <div class="menu-toggle" onclick="toggleMenu()">
       <i data-lucide="menu"></i>
     </div>
     <nav id="navbar">
       <ul>
-        <li><a href="#" onclick="switchTab('home')" class="nav-link active" id="link-home">Home</a></li>
-        <li><a href="#" onclick="switchTab('about')" class="nav-link" id="link-about">About</a></li>
-        <li><a href="#" onclick="switchTab('contact')" class="nav-link" id="link-contact">Contact</a></li>
+        <li><a href="home.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- HOME SECTION -->
-    <div id="home" class="page-section active">
-      <section class="hero">
-        <h1>HI-TECH<br>RENTAL SHOP</h1>
-        <p>ഇനി നിങ്ങളുടെ പ്രശ്നം നമ്മൾ പരിഹരിക്കാം. സൈറ്റിൽ വന്ന് സെറ്റാകാം. ചെറിയ ചിലവ്, വലിയ ഉപകാരം.</p>
-        <button onclick="switchTab('contact')" class="btn">ഇപ്പോൾ വിളിക്കൂ</button>
-      </section>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h1>HI-TECH<br>RENTAL SHOP</h1>
+      <p>ഇനി നിങ്ങളുടെ പ്രശ്നം നമ്മൾ പരിഹരിക്കാം. സൈറ്റിൽ വന്ന് സെറ്റാകാം. ചെറിയ ചിലവ്, വലിയ ഉപകാരം.</p>
+      <button onclick="location.href='contact.html'" class="btn">ഇപ്പോൾ വിളിക്കൂ</button>
+    </section>
 
-      <div class="container">
-        <h2>ഞങ്ങളെ തിരഞ്ഞെടുക്കാൻ കാരണങ്ങൾ</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <i data-lucide="shield-check" color="#ff0033" size="48" style="margin-bottom:1rem;"></i>
-            <h3>മികച്ച നിലവാരം</h3>
-            <p>എല്ലാ ടൂൾസും പരിശോധിച്ച് സർവീസ് ചെയ്തത്</p>
-          </div>
-          <div class="feature-card">
-            <i data-lucide="indian-rupee" color="#ff0033" size="48" style="margin-bottom:1rem;"></i>
-            <h3>താങ്ങാവുന്ന നിരക്ക്</h3>
-            <p>ദിവസം/ആഴ്ച/മാസം റേറ്റുകൾ മികച്ചത്</p>
-          </div>
-          <div class="feature-card">
-            <i data-lucide="zap" color="#ff0033" size="48" style="margin-bottom:1rem;"></i>
-            <h3>വേഗ സർവീസ്</h3>
-            <p>എളുപ്പ ബുക്കിങ് & ഡെലിവറി</p>
-          </div>
+    <div class="container">
+      <h2>ഞങ്ങളെ തിരഞ്ഞെടുക്കാൻ കാരണങ്ങൾ</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i data-lucide="shield-check" color="#ff0033" size="48" style="margin-bottom:1rem;"></i>
+          <h3>മികച്ച നിലവാരം</h3>
+          <p>എല്ലാ ടൂൾസും പരിശോധിച്ച് സർവീസ് ചെയ്തത്</p>
         </div>
-      </div>
-
-      <div class="container" style="padding-top:0;">
-        <h2>Location</h2>
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d816.6867744083328!2d75.91160065470363!3d11.189047196491845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6455787f8f4f9%3A0xb7f52795e2f0e1e6!2sTECH%20TOOLS%20%26%20RENTALS!5e1!3m2!1sen!2sin!4v1768102524971!5m2!1sen!2sin"
-            width="100%" height="400" style="border:0;" allowfullscreen loading="lazy">
-          </iframe>
+        <div class="feature-card">
+          <i data-lucide="indian-rupee" color="#ff0033" size="48" style="margin-bottom:1rem;"></i>
+          <h3>താങ്ങാവുന്ന നിരക്ക്</h3>
+          <p>ദിവസം/ആഴ്ച/മാസം റേറ്റുകൾ മികച്ചത്</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="zap" color="#ff0033" size="48" style="margin-bottom:1rem;"></i>
+          <h3>വേഗ സർവീസ്</h3>
+          <p>എളുപ്പ ബുക്കിങ് & ഡെലിവറി</p>
         </div>
       </div>
     </div>
 
-    <!-- ABOUT SECTION -->
-    <div id="about" class="page-section">
-      <img src="https://www.clicktoindia.com/widgetimgs/clicktoindia_widget_705.jpeg" alt="Banner" class="banner-img" onerror="this.src='https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80'">
-      
-      <div class="container">
-        <h1>About Us</h1>
-        <p class="about-text">
-          HI-TECH Tools & Rentals എന്നത് കന്നംവെട്ടിക്കാവ്, മലപ്പുറം ആസ്ഥാനമായി പ്രവർത്തിക്കുന്ന വിശ്വസനീയമായ tool rental സ്ഥാപനമാണ്. 
-          നിർമ്മാണ, കൃഷി, റോഡ് വർക്ക്, demolition തുടങ്ങിയ എല്ലാ ജോലികൾക്കും ആവശ്യമായ modern tools മികച്ച നിലവാരത്തിൽ വാടകയ്ക്ക് നൽകുന്നതാണ് ഞങ്ങളുടെ പ്രധാന സേവനം.
-        </p>
-
-        <div class="services-grid">
-          <div class="service-card card-grass">
-            <h3>കാട് വെട്ടൽ</h3>
-            <p>High power cutting machines ഉപയോഗിച്ച് വേഗത്തിൽ ജോലി</p>
-          </div>
-          <div class="service-card card-concrete">
-            <h3>കോൺക്രീറ്റ് കട്ടിംഗ്</h3>
-            <p>Concrete cutting machine, floor cutting tools</p>
-          </div>
-          <div class="service-card card-breaker">
-            <h3>കോൺക്രീറ്റ് പൊടിക്കൽ</h3>
-            <p>Breaker, demolition tools വാടകയ്ക്ക്</p>
-          </div>
-          <div class="service-card card-tools">
-            <h3>മറ്റു Tools</h3>
-            <p>Pillar cutting, tile cutting, drilling tools</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CONTACT SECTION -->
-    <div id="contact" class="page-section">
-      <div class="container" style="text-align: center;">
-        <h1>Contact Us</h1>
-        <p style="margin-bottom: 3rem; color: #ccc;">ഇപ്പോൾ തന്നെ വിളിക്കൂ അല്ലെങ്കിൽ WhatsApp ചെയ്യൂ</p>
-
-        <div class="contact-box">
-          <div class="contact-card">
-            <i data-lucide="phone" color="#ff0033" size="40" style="margin-bottom:1rem;"></i>
-            <h3>Call Us</h3>
-            <p>Tool rental details അറിയാൻ</p>
-            <a href="tel:+919072206212" class="btn" style="margin-top:1rem;">Call Now</a>
-          </div>
-
-          <div class="contact-card">
-            <i data-lucide="message-circle" color="#ff0033" size="40" style="margin-bottom:1rem;"></i>
-            <h3>WhatsApp</h3>
-            <p>Direct WhatsApp chat</p>
-            <a href="https://wa.me/919946680626?text=Hi%20HI-TECH%20Rental%20Shop" class="btn" target="_blank" style="margin-top:1rem;">Chat Now</a>
-          </div>
-
-          <div class="contact-card">
-            <i data-lucide="map-pin" color="#ff0033" size="40" style="margin-bottom:1rem;"></i>
-            <h3>Location</h3>
-            <p>K.V. Kavu, Kannamvettikkavu</p>
-            <p>Malappuram</p>
-          </div>
-        </div>
-
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d816.6867744083328!2d75.91160065470363!3d11.189047196491845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6455787f8f4f9%3A0xb7f52795e2f0e1e6!2sTECH%20TOOLS%20%26%20RENTALS!5e1!3m2!1sen!2sin!4v1768102524971!5m2!1sen!2sin"
-            width="100%" height="450" style="border:0;" allowfullscreen loading="lazy">
-          </iframe>
-        </div>
+    <div class="container" style="padding-top:0;">
+      <h2>Location</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d816.6867744083328!2d75.91160065470363!3d11.189047196491845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6455787f8f4f9%3A0xb7f52795e2f0e1e6!2sTECH%20TOOLS%20%26%26%20RENTALS!5e1!3m2!1sen!2sin!4v1768102524971!5m2!1sen!2sin"
+          width="100%" height="400" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
       </div>
     </div>
   </main>
 
   <!-- FLOATING BUTTONS -->
   <a href="https://wa.me/919946680626?text=Hi%20HI-TECH%20Rental%20Shop" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-    <!-- WhatsApp SVG -->
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.304-5.235c0-5.443 4.429-9.876 9.88-9.876 2.64 0 5.122 1.03 6.988 2.896a9.825 9.825 0 012.893 6.994c-.003 5.444-4.432 9.853-9.886 9.853" fill="white"/></svg>
   </a>
 
@@ -559,36 +369,10 @@ to me
     // Initialize Icons
     lucide.createIcons();
 
-    // Navigation Logic
-    function switchTab(tabId) {
-      // 1. Hide all sections
-      document.querySelectorAll('.page-section').forEach(section => {
-        section.classList.remove('active');
-      });
-
-      // 2. Remove active class from nav links
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-      });
-
-      // 3. Show selected section and activate link
-      document.getElementById(tabId).classList.add('active');
-      document.getElementById('link-' + tabId).classList.add('active');
-
-      // 4. Close mobile menu if open
-      const nav = document.getElementById('navbar');
-      if (nav.classList.contains('active')) {
-        nav.classList.remove('active');
-      }
-
-      // 5. Scroll to top
-      window.scrollTo(0, 0);
-    }
-
     // Mobile Menu Toggle
     function toggleMenu() {
-      const nav = document.getElementById('navbar');
-      nav.classList.toggle('active');
+      const nav = document.getElementById("navbar");
+      nav.classList.toggle("active");
     }
 
     // Header Shrink on Scroll
