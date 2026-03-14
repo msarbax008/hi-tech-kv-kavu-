@@ -146,3 +146,4 @@ are blocking requests from your app. Here's how to resolve it:
 - [Firebase AI Logic documentation](https://firebase.google.com/docs/ai-logic)
 - [FAQ about this sample app](https://firebase.google.com/support/faq/#console-sample-app-experience)
 - [Firebase Support](https://firebase.google.com/support)
+# s-hitech
