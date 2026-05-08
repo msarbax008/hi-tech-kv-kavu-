@@ -149,3 +149,4 @@ are blocking requests from your app. Here's how to resolve it:
 # s-hitech
 # hi-techtools-reantal-shop
 # hi-techtools-reantal-shop
+# hi-techtools-reantal-shop
