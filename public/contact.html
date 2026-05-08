@@ -149,8 +149,43 @@
       font-size: 0.95rem;
     }
   </style>
-</head>
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  
+    document.getElementById("orderForm")
+    .addEventListener("submit", function(e){
+  
+      e.preventDefault();
+  
+      let name = document.getElementById("name").value;
+      let phone = document.getElementById("phone").value;
+      let tool = document.getElementById("tool").value;
+      let message = document.getElementById("message").value;
+  
+      let whatsappMessage =
+  `HI-TECH Rental Booking
+  
+  Name: ${name}
+  Phone: ${phone}
+  Tool: ${tool}
+  
+  Details:
+  ${message}`;
+  
+      let url =
+      "https://wa.me/919744206212?text=" +
+      encodeURIComponent(whatsappMessage);
+  
+      window.open(url, "_blank");
+  
+    });
+  
+  });
+  </script>
+
+</head>
 <body>
 
 <header>
@@ -171,28 +206,57 @@
 
   <div class="contact-box">
 
-    <div class="card">
-      <h3>📞 Call Us</h3>
-      <p>Tool rental details അറിയാൻ</p>
-      <a href="tel:+919946680626" class="btn">Call Now</a>
-    </div>
+   <div class="card">
 
+    <h3>
+      <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png"
+           width="22" style="vertical-align:middle; margin-right:6px;">
+      Call Us
+    </h3>
+
+  <p>Tool rental details</p>
+  <p>അറിയാൻ</p>
+
+  <a href="tel:+919072206212" class="btn">
+    Call Now
+  </a>
+
+</div>
     <div class="card">
-      <h3>💬 WhatsApp</h3>
+
+      <h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="25">
+        WhatsApp
+      </h3>
+    
       <p>Direct WhatsApp chat</p>
-      <a href="https://wa.me/919946680626?text=Hi%20HI-TECH%20Rental%20Shop,%20tool%20rental%20details%20ariyan%20vendi%20contact%20cheyyunnu."
+    
+      <a href="https://wa.me/919744206212?text=Hi%20HI-TECH%20Rental%20Shop,%20tool%20rental%20details%20ariyan%20vendi%20contact%20cheyyunnu."
          class="btn" target="_blank">
-        Chat on WhatsApp
+         Chat on WhatsApp 
       </a>
+    
     </div>
 
     <div class="card">
-      <h3>📍 Location</h3>
+
+      <h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991231.png"
+             width="22" style="vertical-align:middle; margin-right:6px;">
+        Location
+      </h3>
+    
       <p>K.V. Kavu</p>
       <p>Kannamvettikkavu, Malappuram</p>
+    
+      <a href="https://www.google.com/maps/search/?api=1&query=Kannamvettikkavu+Malappuram"
+         class="btn" target="_blank">
+         Open in Maps
+      </a>
+    
     </div>
-
-  </div>
+    
+    </div>
 
   <div class="map">
     <iframe
@@ -206,17 +270,98 @@
   </div>
   <div class="contact">
     <h2>Contact Information</h2>
-    <p><strong>📍 Location:</strong> Kannamvettikavu, Malappuram</p>
-    <p><strong>📞 Phone:</strong> 9072 206 212 | 9744 206 212</p>
-    <p><strong>📧 Email:</strong> hashtellmobile@gmail.com</p>
+  
+    <p>
+      <strong>
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" width="18" style="vertical-align:middle; margin-right:6px;">
+        Location:
+      </strong>
+      Kannamvettikavu, Malappuram
+    </p>
+  
+    <p>
+      <strong>
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" width="18" style="vertical-align:middle; margin-right:6px;">
+        Phone:
+      </strong>
+      9072 206 212 | 9744 206 212
+    </p>
+  
+    <p>
+      <strong>
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="18" style="vertical-align:middle; margin-right:6px;">
+        Email:
+      </strong>
+      hashtellmobile@gmail.com
+    </p>
+  
   </div>
+  <!-- ORDER FORM -->
+<div class="card" style="margin-bottom:3rem;">
 
+  <h3>
+    <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png"
+         width="24"
+         style="vertical-align:middle; margin-right:6px;">
+    Book Your Tool
+  </h3>
+
+  <p style="margin-bottom:1.5rem;">
+    ആവശ്യമായ tool select ചെയ്ത് booking request അയക്കൂ
+  </p>
+
+  <form id="orderForm">
+
+    <input type="text"
+           id="name"
+           placeholder="Your Name"
+           required
+           style="width:100%; padding:14px; margin-bottom:15px;
+                  border:none; border-radius:10px;">
+
+<input type="tel"
+       id="phone"
+       placeholder="Phone Number"
+       required
+       pattern="[0-9]{10}"
+       maxlength="10"
+       inputmode="numeric"
+       oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+       style="width:100%; padding:14px; margin-bottom:15px;
+              border:none; border-radius:10px;">
+
+<input list="tools"
+       id="tool"
+       placeholder="Select or Type Tool Name"
+       required
+       style="width:100%; padding:14px; margin-bottom:15px;
+              border:none; border-radius:10px;">
+
+<datalist id="tools">
+  <option value="Drill Machine">
+  <option value="Cutter Machine">
+  <option value="Concrete Mixer">
+  <option value="Welding Machine">
+  <option value="Water Pump">
+</datalist>
+
+    <textarea id="message"
+              placeholder="Additional Details"
+              rows="4"
+              style="width:100%; padding:14px;
+                     border:none; border-radius:10px;"></textarea>
+
+    <button type="submit" class="btn">
+      Send Booking
+    </button>
+
+  </form>
+
+</div>
+  
 </section>
 
-<a class="whatsapp-float"
-   href="https://wa.me/919946680626"
-   target="_blank"
-   aria-label="Chat on WhatsApp"></a>
+
 
 <footer>
   © 2026 HI-TECH Tools & Rentals | Kannamvettikavu
